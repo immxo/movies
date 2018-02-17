@@ -1,0 +1,41 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-12">
+        <input type="search" id="search">
+        <input  type="submit" value="Поиск фильма" onclick="ajaxload();">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <div id="poster"></div>
+      </div>
+      <div class="col-lg-6">
+        <div id="movie"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-2 invisible addBtn" >
+        <button id="watch" onclick="addToWatch();">Посмотрел</button>
+      </div>
+      <div class="col-lg-2 invisible addBtn" >
+        <button id="want">Добавить в желаемые</button>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 invisible watch">
+        <div id="watchPoster"></div>
+      </div>
+      <div class="col-lg-6 invisible">
+        <div id="watchMovie"></div>
+      </div>
+    </div>
+  
+  </div>
+{% endblock %}
