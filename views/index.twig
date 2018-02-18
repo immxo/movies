@@ -1,14 +1,16 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <div class="container">
-    
-    <div class="row">
-      <div class="col-lg-12">
-        <input type="search" id="search">
-        <input  type="submit" value="Поиск фильма" onclick="ajaxload();">
-      </div>
+  
+  <div class="search">
+    <div class="formSearch">
+          <input type="search" id="search">
+      <button  type="submit" class="btnSearch"  onclick="ajaxload();"><i class="fas fa-search"></i></button>
     </div>
+     
+  </div>
+  
+  <div class="container">
     
     <div class="row">
       <div class="col-lg-6">
@@ -24,10 +26,10 @@
         <button id="watch" onclick="addToWatch();">Посмотрел</button>
       </div>
       <div class="col-lg-2 invisible addBtn" >
-        <button id="want">Добавить в желаемые</button>
+        <button id="want">Хочу посмотреть</button>
       </div>
     </div>
-    
+  
     <div class="row">
       <div class="col-lg-6 invisible watch">
         <div id="watchPoster"></div>
@@ -36,6 +38,9 @@
         <div id="watchMovie"></div>
       </div>
     </div>
-  
+    
   </div>
+
 {% endblock %}
+
+
